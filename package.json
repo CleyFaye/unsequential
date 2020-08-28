@@ -1,0 +1,63 @@
+{
+  "name": "@cley_faye/unsequential",
+  "version": "0.1.0",
+  "description": "Create a seemingly non-sequential (but reversible) sequence of unique identifiers.",
+  "main": "lib/unsequential.js",
+  "scripts": {
+    "test": "nyc mocha tests/**/*.test.ts",
+    "build": "npx grunt clean build"
+  },
+  "nyc": {
+    "require": [
+      "esm",
+      "ts-node/register"
+    ],
+    "extension": [
+      ".ts",
+      ".js"
+    ],
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [
+      "Gruntfile.js",
+      "src/tests/**/*"
+    ],
+    "cache": false,
+    "all": true
+  },
+  "files": [
+    "lib/**/*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CleyFaye/unsequential.git"
+  },
+  "author": "Gabriel Paul \"Cley Faye\" Risterucci",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CleyFaye/unsequential/issues"
+  },
+  "homepage": "https://github.com/CleyFaye/unsequential#readme",
+  "devDependencies": {
+    "@cley_faye/eslint-config": "^1.0.2",
+    "@types/mocha": "^8.0.3",
+    "@types/node": "^14.6.1",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "eslint": "^7.7.0",
+    "esm": "^3.2.25",
+    "grunt": "^1.3.0",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-ts": "^6.0.0-beta.22",
+    "load-grunt-tasks": "^5.1.0",
+    "mocha": "^8.1.2",
+    "nyc": "^15.1.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "esm": {
+    "cache": false
+  }
+}
