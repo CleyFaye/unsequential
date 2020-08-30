@@ -5,6 +5,8 @@
   "main": "lib/unsequential.js",
   "scripts": {
     "test": "nyc mocha src/tests/**/*.test.ts",
+    "build": "npx grunt clean build",
+    "prepack": "npm run test && npm run build"
   },
   "nyc": {
     "require": [
