@@ -4,8 +4,7 @@
   "description": "Create a seemingly non-sequential (but reversible) sequence of unique identifiers.",
   "main": "lib/unsequential.js",
   "scripts": {
-    "test": "nyc mocha tests/**/*.test.ts",
-    "build": "npx grunt clean build"
+    "test": "nyc mocha src/tests/**/*.test.ts",
   },
   "nyc": {
     "require": [
@@ -27,7 +26,8 @@
     "all": true
   },
   "files": [
-    "lib/**/*.js"
+    "lib/**/*.js",
+    "!lib/tests/**/*.js"
   ],
   "repository": {
     "type": "git",
